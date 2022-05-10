@@ -42,11 +42,11 @@ or you can trigger with button
 
 ``` dart
 ElevatedButton(
-            onPressed: () {
-              context.showToastySnackbar(title, message, AlertType.success);
-            },
-            child: const Text("Show Snackbar: Success"),
-          )
+    onPressed: () {
+      context.showToastySnackbar(title, message, AlertType.success);
+    },
+    child: const Text("Show Snackbar: Success"),
+)
 ```
 
 
@@ -55,4 +55,4 @@ Check [examples](https://github.com/kanieren/toasty_snackbar/tree/master/example
 
 ## Screenshots
 
-![](https://imgur.com/F56sZwm)
+![Toasty-Snackbar](https://i.imgur.com/F56sZwm.gif)
