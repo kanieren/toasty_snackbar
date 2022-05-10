@@ -1,39 +1,58 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# toasty_snackbar
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+An alert toast package to show snackbar easily. This package helps you to render a dynamic alert toast in your Flutter app
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+# Support
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+This package supports usage on both Android and iOS builds.
 
-## Features
+## Adding to your flutter project
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Add [`toasty_snackbar`](https://pub.dartlang.org) as a dependency in your pubspec.yaml file
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+``` yaml
+toasty_snackbar: ^0.0.1
 ```
 
-## Additional information
+## Use the package
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Import the library in your dart file
+
+``` dart
+import 'package:toasty_snackbar/toasty_snackbar.dart';
+```
+
+## Example 1
+
+``` dart
+  @override
+  Widget build(BuildContext context) {
+    String title = "Alert Test Title";
+    String message =
+        "Lorem ipsum dolor sit amet. Qui quos perferendis qui harum voluptatem a dolorum minima est voluptas veritatis. Nam commodi unde quo adipisci itaque sed autem veritatis est mollitia quam. Est delectus ipsum et beatae quasi ea molestias voluptatibus quo Quis culpa ut atque consequatur sit explicabo iste ea natus cumque. Aut quia aliquam 33 nostrum tempora et voluptates quia.";
+    return Center(context.showToastySnackbar(title, message, AlertType.info);
+
+    );
+  }
+}
+```
+or you can trigger with button
+
+## Example 2
+
+``` dart
+ElevatedButton(
+            onPressed: () {
+              context.showToastySnackbar(title, message, AlertType.success);
+            },
+            child: const Text("Show Snackbar: Success"),
+          )
+```
+
+
+
+Check [examples](https://github.com/kanieren/toasty_snackbar/tree/master/example)
+
+## Screenshots
+
+![](https://imgur.com/F56sZwm)
